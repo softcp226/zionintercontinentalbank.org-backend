@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;0,700;1,600&family=Nunito:wght@500&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;0,700;1,600&display=swap'); */
+html{
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(31,45,61,0);
+}
+
+body{
+    margin: 0;
+    
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    
+    text-align: left;
+    background-color: #fff;
+}
+ nav{
+   
+    height: 70px;
+    width:100%;
+font-family: 'Nunito', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+z-index: 2;
+     box-shadow: 0 0 1.25rem rgb(31 45 61 / 10%);
+      background-color: #fff;
+    
+}
+.nav-text-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    box-shadow: 0 0 1.25rem rgb(31 45 61 / 3%);
+    text-align: center;
+    background-color: #fff;
+    /* height: 100vh; */ 
+    z-index: 20;
+    position: relative;
+}
+.nav-text-container-hide{
+display: none;
+}
+.phone-burger{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    position: relative;
+    top: 20px;
+}
+.nav-text-container article{
+    padding: 10px;
+    margin-top: 4%;
+  /* margin-left: 20px; */
+}
+nav a{
+    color: #3e4265;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+
+}
+#handlenav{
+    cursor: pointer;
+}
+
+@media (min-width:800px) {
+    nav{
+        height: 85px;
+    }
+.nav-text-container-hide, .nav-text-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: row;
+    box-shadow: unset;
+    text-align: center;
+    background-color: unset;
+  
+    /* height: 100vh; */
+    
+}
+.nav-text-container article{
+    padding: unset;
+    margin-top: 30px;
+  /* margin-left: 20px; */
+}
+.phone-burger{
+    display: none;
+}
+hr{
+    display: none;
+}
+nav article{
+    padding: unset;
+    margin-top:33px;
+  
+}
+.menu{
+    display: none;
+}
+
+}
+/* a{
+    text-decoration: none;
+} */
+/* nav{
+    background-color: red;
+    height: 10vh;
+        box-shadow: 0 0 1.25rem rgb(31 45 61 / 5%);
+
+
+}
+ */
+/* ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+} */

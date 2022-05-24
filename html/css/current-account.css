@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;0,700;1,600&family=Roboto:wght@400;500&display=swap");
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: left;
+  background-color: #fff;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.section-container {
+  background: linear-gradient(
+      180deg,
+      rgba(19, 16, 34, 0.58) 0%,
+      rgba(19, 16, 34, 0.78) 100%
+    ),
+    url("./assets/hero-bg.jpg");
+  width: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  background-attachment: initial, initial;
+  background-origin: initial, initial;
+  background-clip: initial, initial;
+  background-color: initial;
+  background-size: cover;
+  background-position: center;
+
+  color: #fff;
+  position: relative;
+  height: 650px;
+}
+.section-txt-container {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 30vh;
+  width: 100%;
+}
+.txt-container {
+  width: 90%;
+  margin: auto;
+}
+.head-txt::before {
+  font-weight: bold;
+  content: "Current account is made to suit your needs.";
+  color: #fff;
+  font-size: 38px;
+  text-align: center;
+}
+
+.small-hd::before {
+  content: "Zion Intercontinental Bank Current account enables you bank wisely. It comes with great beneficts to Speed up your business's cash flow with secure and reliable services";
+  /* font-weight: 500; */
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+/* figure {
+  text-align: center;
+  width: 90%;
+} */
+.flex-div-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: center;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 95%;
+  flex-direction: column;
+}
+.flex-div-container > div{
+  margin: 10px;
+}
+.ref-container{
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+figure a{
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  background-color: #142c8e;
+  border-radius: 5px;
+  color: #fff;
+ font-weight: 800;
+}
+.big-p{
+font-weight: 700;
+font-size: 19px;
+color: #000;
+}
+
+@media (min-width: 400px) {
+  .section-container {
+    height: 550px;
+  }
+  .head-txt::before {
+    font-size: 40px;
+  }
+  .small-hd::before {
+    font-size: 19px;
+  }
+
+ 
+}
+@media (min-width: 700px) {
+  .section-container {
+    height: 100vh;
+  }
+  .head-txt::before {
+    font-size: 70px;
+  }
+  .small-hd::before {
+    font-size: 22px;
+  }
+ 
+    .flex-div-container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .contan-sm-txt {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  .small-hd::before {
+    font-size: 30px;
+  }
+    .flex-div-container {
+    flex-direction: row;
+    width: 98%;
+  }
+  
+}
+
+@media (min-width: 1000px) {
+ .flex-div-container {
+    flex-direction: row;
+    width: 90%;
+  }
+  
+}
+

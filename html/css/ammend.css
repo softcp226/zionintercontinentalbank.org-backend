@@ -1,0 +1,10 @@
+.SCHLOSSERBreaker{
+    display: block;
+ 
+}
+
+@media (min-width:700px) {
+    .SCHLOSSERBreaker{
+    display: none;
+}
+}

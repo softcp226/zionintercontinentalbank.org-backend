@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+
+body{
+    background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url("../03\ \(1\).jpg");
+    background-image: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url("../03\ \(1\).jpg");
+
+
+    width: 100%;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+    background-attachment: initial, initial;
+    background-origin: initial, initial;
+    background-clip: initial, initial;
+    background-color: initial;
+    background-size: cover;
+    background-position: center;
+    /* padding: 5vh 0; */
+    /* color: #fff; */
+    position: relative;
+    height:100vh ;
+}
+
+
+main{
+    background-color: #fff;
+    margin: auto;
+    height: 85vh;
+    width: 65%;
+    position: relative;
+    top:8vh ;
+    border-radius: 10px;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+
+.aim{
+    font-size: 1.5rem;
+    color:#142c8e; 
+    padding-left: 40px;
+    font-size: 18px;
+    position: relative;
+    font-weight: 500;
+  
+    /* #3043c0, #5f49cc, #8450d7, #a656e1, #c75cea */
+}
+
+.aim ::before{
+    content: '';
+    background: #142c8e;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: #142c8e;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 30px;
+    height: 2px;
+
+}
+
+hr{
+    background-color: #142c8e;
+    position: relative;
+    top: 3%;
+}
+.inputcontainer{
+    position: relative;
+    top: 4%; 
+    
+}
+
+.illustration{
+    border-radius: 10px;
+    width: 180px;
+}
+
+.inputcontainer >div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+padding: 2px;
+
+}
+.inputcontainer >div div{
+    
+    position: absolute;
+    /* left: 200px; */
+}
+
+.nametag{
+    position: relative;
+    left: 1%;
+}
+button{
+    padding: 10px 14px;
+    display: block;
+    width: auto;
+    background-color: #6366f1;
+    border-color: #6366f1;
+    border-radius: 10px;
+    margin: 20px 0px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+   border: 1px solid #142c8e;
+   cursor: pointer;
+}
+
+button:hover{
+   padding: 10px 14px;
+    display: block;
+    width: auto;
+    background-color: #5b5ef7;
+    border-color: #6366f1;
+    border-radius: 10px;
+    margin: 20px 0px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+   border: 1px solid #142c8e;
+}
+
+
+input,select{
+padding: 10px;
+border: 1px solid rgb(36, 35, 35);
+width: 300px;
+border-radius: 10px;
+position: relative;
+left: 10%;
+
+}
+
+textarea{
+padding: 10px;
+border: 1px solid rgb(36, 35, 35);
+width: 300px;
+border-radius: 10px;
+position: relative;
+left: 10%;
+font-size: 17px;
+}
+
+
+a{
+    text-decoration: none;
+    color: #142c8e;
+    padding: 9px;
+}
+
+@media (min-width:1050px) {
+    .nametag{
+        /* position: absolute;
+        margin: auto; */
+        position: relative;
+        left: 15%;
+    }
+}
+
+
+@media (max-width:800px) {
+    main{
+        background-color:transparent;
+        margin: auto;
+        height: 85vh;
+        width: 100%;
+        position: relative;
+        top:8vh ;
+        border-radius: 10px;
+        text-align: center;
+        color: #fff;
+        /* overflow-y: scroll; */
+    }
+    
+    input,select{
+        width: 90%;
+        background-color: transparent;
+        border: 1px solid #fff;
+color: #fff;
+left: 0%;
+    }
+
+    textarea{
+        width: 90%;
+        background-color: transparent;
+        border: 1px solid #fff;
+color: #fff;
+left: 0%;
+font-size: 16px;
+    }
+
+    .illustration{
+    display: none;
+}
+
+    .nametag{
+        display: none;
+    }
+
+
+    .aim ::before{
+        
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        left: 10%;
+    
+    }
+    select{
+        background-color: transparent;
+    }
+    option{
+        background-color:transparent;
+        color: #000;
+    }
+
+}
+
+.errmessage{
+    color: red;
+    position: relative;
+  top: 14px;
+    /* margin-bottom: 70px; */
+    /* bottom: 14px; */
+    
+}
+
+/* 
+@media (min-width:479px){
+    input,select{
+        width: 70%;
+        background-color: transparent;
+        border: 1px solid #fff;
+color: #fff;
+left: 0%;
+    }
+} */
