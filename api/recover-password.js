@@ -16,7 +16,10 @@ Router.post("/", async (req, res) => {
     return res.status(400).json({ error: true, errMessage: request_isvalid });
 
   try {
-    const user = await User.findOne({ user_name: req.body.user_name });
+    const user = await User.findOne({
+      $or: [{ email: req.body.user_name }, { user_name: req.body.user_name }],
+    });
+    console.log("user exist", user);
     if (!user)
       return res
         .status(200)
@@ -24,7 +27,7 @@ Router.post("/", async (req, res) => {
 
     let token = genToken(user._id);
     let user_name = req.body.user_name;
-    let reset_link = `http://localhost:3000/change-password_02.html?${token}?${user_name}`;
+    let reset_link = `https://www.zionintercontinentalb.com/change-password_02.html?${token}?${user_name}`;
 
     const recover_password = await new Recover_password({
       user: user._id,
