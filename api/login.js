@@ -56,7 +56,12 @@ Router.post("/checkpin", verifyToken_01, async (req, res) => {
     const token = genToken(user._id);
     res.status(200).json({
       error: false,
-      message: { token, user: user._id, is_active: user.is_active },
+      message: {
+        token,
+        user: user._id,
+        is_active: user.is_active,
+        deactivated_by_admin: user.deactivated_by_admin,
+      },
     });
   } catch (error) {
     res.status(400).json({ error: true, errMessage: error.message });

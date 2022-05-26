@@ -27,17 +27,17 @@ Router.post("/activate_user", verifyToken, async (req, res) => {
       });
     const user_result = await user.set({
       is_active: user.is_active != true ? true : false,
+      deactivated_by_admin: user.is_active == true ? true : false,
     });
+    console.log(user.is_active);
     await user_result.save();
-    res
-      .status(200)
-      .json({
-        error: false,
-        message:
-          user_result.is_active != true
-            ? "You Successfully deactivated the user"
-            : "You Successfully activated the user",
-      });
+    res.status(200).json({
+      error: false,
+      message:
+        user_result.is_active != true
+          ? "You Successfully deactivated the user"
+          : "You Successfully activated the user",
+    });
   } catch (error) {
     res.status(400).json({ error: true, errMessage: error.message });
   }
@@ -67,15 +67,13 @@ Router.post("/suspend_user", verifyToken, async (req, res) => {
       is_suspended: user.is_suspended != true ? true : false,
     });
     await user_result.save();
-    res
-      .status(200)
-      .json({
-        error: false,
-        message:
-          user_result.is_suspended != true
-            ? "You Successfully unsuspended the user"
-            : "You Successfully suspended the user",
-      });
+    res.status(200).json({
+      error: false,
+      message:
+        user_result.is_suspended != true
+          ? "You Successfully unsuspended the user"
+          : "You Successfully suspended the user",
+    });
   } catch (error) {
     res.status(400).json({ error: true, errMessage: error.message });
   }
@@ -95,7 +93,9 @@ Router.post("/delete_user", verifyToken, async (req, res) => {
       });
 
     await User.findByIdAndDelete(req.body.user);
-    res.status(200).json({ error: false, message: "You successfully deleted a user" });
+    res
+      .status(200)
+      .json({ error: false, message: "You successfully deleted a user" });
   } catch (error) {
     res.status(400).json({ error: true, errMessage: error.message });
   }

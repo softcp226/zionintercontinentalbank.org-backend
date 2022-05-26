@@ -1,10 +1,11 @@
-const setCookie = (token, user, is_active) => {
+const setCookie = (token, user, is_active, deactivated_by_admin) => {
   const d = new Date();
   d.setTime(d.getTime() + 24 * 60 * 60 * 1000);
   let expires = "expires=" + d.toUTCString();
   document.cookie = `token=${token} ; ${expires}`;
   document.cookie = `user=${user} ; ${expires}`;
   document.cookie = `is_active=${is_active} ; ${expires}`;
+  document.cookie = `deactivated_by_admin=${deactivated_by_admin} ; ${expires}`;
   //   window.location.replace("/login_pin.html");
   if (is_active != true) return window.location.replace("/inactive.html");
   window.location.replace("/dashboard.html");
@@ -46,11 +47,12 @@ const submit_pin = async (pin) => {
       document.querySelector(".errMessage").innerHTML = result.errMessage;
       document.querySelector("#proceed").innerHTML = "Try again";
     } else {
-      // const [token_01, user, is_active] = ;
+      
       setCookie(
         result.message.token,
         result.message.user,
-        result.message.is_active
+        result.message.is_active,
+        result.message.deactivated_by_admin
       );
       document.querySelector("#proceed").innerHTML = "Success";
     }

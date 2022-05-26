@@ -117,6 +117,11 @@ const userSchema = new mongoose.Schema({
     required: true,
     default: false,
   },
+  deactivated_by_admin: {
+    type: Boolean,
+
+    default: false,
+  },
   is_suspended: {
     type: Boolean,
     required: true,
