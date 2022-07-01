@@ -10,7 +10,7 @@ const validate_transaction = (req) => {
     swift_code: Joi.string(),
     bank_name: Joi.string(),
     account_name: Joi.string(),
-    account_number: Joi.number().required(),
+    account_number: Joi.string().required(),
     amount: Joi.number().required().min(1),
     sender: Joi.string().required(),
     reciever: Joi.string(),
