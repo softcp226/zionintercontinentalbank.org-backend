@@ -46,7 +46,7 @@ body {
 .head-txt::before {
   font-weight: bold;
   content: "Unlimited 40% Cash Back for every investor .";
-  /* content: "Get a proffessional web or mobile application from a high end developer"; */
+  content: "Get a professional web or mobile application from a high end developer";
   color: #fff;
   font-size: 38px;
   text-align: center;
@@ -55,7 +55,8 @@ body {
 .small-hd::before {
   content: "Join thousands of investors and diversify your portfolio with exclusive private credit investments. Get up to 40% cash back for all your investment";
 
-  /* content: "Get a proffessional web or mobile application to manage your buisness and go beyound face to face interaction with customers, whatsapp us:+2347032563706"; */
+  content: "Go beyond face to face interaction with customers and clear doubt from the mind of intending customers with just a professional website or mobile app";
+
   /* font-weight: 500; */
   font-size: 18px;
   opacity: 0.7;
