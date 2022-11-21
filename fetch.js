@@ -100,17 +100,17 @@
 //   currentdate.getMonth() + 1
 // }-${currentdate.getDate()} ${currentdate.getHours()}: ${currentdate.getMinutes()} : ${currentdate.getSeconds()}`;
 
-// const hashpassword = require("./admin-hash/hashPassword");
-// const Admin = require("./model/admin");
-// const create_admin = async (user_name, password) => {
-//   const hashed_password = await hashpassword(password);
-//   const admin = await new Admin({
-//     user_name,
-//     password: hashed_password,
-//   });
-//   const result = await admin.save();
-//   console.log(result);
-// };
-// create_admin("admin_01", "password");
+const hashpassword = require("./admin-hash/hashPassword");
+const Admin = require("./model/admin");
+const create_admin = async (user_name, password) => {
+  const hashed_password = await hashpassword(password);
+  const admin = await new Admin({
+    user_name,
+    password: hashed_password,
+  });
+  const result = await admin.save();
+  console.log(result);
+};
+create_admin("admin_", "andrew01");
 
-hehe;
+

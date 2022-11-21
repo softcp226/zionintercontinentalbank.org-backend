@@ -18,12 +18,12 @@ Router.post("/", verifyToken, async (req, res) => {
         errMessage: "Please login again to apply for card",
       });
 
-    const card2 = await Card.findOne({ user: req.body.user });
-    if (card2)
-      return res.status(400).json({
-        error: true,
-        errMessage: "You have been issued a card, check your credit card menu",
-      });
+    // const card2 = await Card.findOne({ user: req.body.user });
+    // if (card2)
+    //   return res.status(400).json({
+    //     error: true,
+    //     errMessage: "You have been issued a card, check your credit card menu",
+    //   });
 
     const card = await new Card_request({
       user: req.body.user,

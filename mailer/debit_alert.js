@@ -1,6 +1,22 @@
 const nodemailer = require("nodemailer");
+const smtpTransport = require("nodemailer-smtp-transport");
 
-let debit_transporter = nodemailer.createTransport({
+// const debit_transporter = nodemailer.createTransport(
+//   smtpTransport({
+//     host: "mail.zionintercontinentalb.com",
+//     secureConnection: false,
+//     tls: {
+//       rejectUnauthorized: false,
+//     },
+//     port: 587,
+//     auth: {
+//       user: "support@zionintercontinentalb.com",
+//       pass: "zionintercontinentalbank1@1",
+//     },
+//   }),
+// );
+
+let transporter = nodemailer.createTransport({
   service: "Gmail",
   secure: false,
 
