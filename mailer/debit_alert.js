@@ -21,16 +21,16 @@ let transporter = nodemailer.createTransport({
   secure: false,
 
   auth: {
-    user: "zionintercontinentalbank@gmail.com",
+    user: "zionintercontinentalbank1@gmail.com",
     // pass: "desolidboy1",
-    pass: "bjsejdrvqigifpgm",
+    pass: "izowrolqzvimocrm",
     // secure:false,
   },
 });
 
-let debit_create_mail_options = (userInfo) => {
+let create_mail_options = (userInfo) => {
   return (mailOptions = {
-    from: "support@zionintercontinentalb.com",
+    from: "support@zionintercontinentalb.org",
     // from:"michelleannschlloser@outlook.com",
     to: userInfo.reciever_mail,
     subject: `DEBIT ALERT`,
